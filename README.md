@@ -76,16 +76,56 @@ Compare the original modulating signal with the demodulated signal. PROCEDURE
 
 Program
 
+```
 
+clc;
+clear;
+close;
+Ac=15.6;
+Am=7.8;
+Fc=3900;
+Fm=390;
+Fs=40000;
+t=0:1/Fs:2/Fm;
+E1=Am*sin(2*%pi*Fm*t);
+subplot(4,1,1);
+plot(t,E1);
+xlabel("Time(s");
+ylabel("Amplitude");
+title("Message Signal");
+E2=Ac*sin(2*%pi*Fc*t);
+subplot(4,1,2);
+plot(t,E2);
+xlabel("Time(s");
+ylabel("Amplitude");
+title("Carrier Signal");
+E3=(Ac+Am*sin(2*%pi*Fm*t)).sin(2%pi*Fc*t);
+subplot(4,1,3);
+plot(t,E3);
+xlabel("Time(s");
+ylabel("Amplitude");
+title("AM Signal");
+demodulated_signal=abs(hilbert(E3))-Ac;
+subplot(4,1,4);
+plot(t,demodulated_signal);
+xlabel("Time(s");
+ylabel("Amplitude");
+title("Demodulated Signal");
+xgrid();
 
+```
 Output Waveform
 
+<img width="805" height="401" alt="image" src="https://github.com/user-attachments/assets/32f9042f-792c-4dc7-bf58-6044b0e06c8b" />
 
 
 
 
 TABULATION:
 
+<img width="916" height="1012" alt="image" src="https://github.com/user-attachments/assets/d549c644-079a-4670-a6c5-f5442b69ee60" />
+
+<img width="680" height="1031" alt="image" src="https://github.com/user-attachments/assets/63fe6740-0973-4707-8024-8b66b29e6b95" />
 
 
 Calculation
@@ -94,11 +134,15 @@ Calculation
 
 
 MODEL GRAPH
- <img width="919" height="1290" alt="image" src="https://github.com/user-attachments/assets/55326c5b-7dd5-4873-aaf6-d219bb7c4420" />
+
+<img width="702" height="929" alt="image" src="https://github.com/user-attachments/assets/3572941b-f347-4554-b4bb-7b98f4d08608" />
+
 
  
  
 
 
 RESULT:
-Thus the amplitude modulation and demodulation is experimentally done and the output is verified.
+<img width="682" height="330" alt="image" src="https://github.com/user-attachments/assets/b6874d79-e72b-4fa1-87c1-bf2c8fd80321" />
+
+
