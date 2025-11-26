@@ -135,10 +135,12 @@ Calculation
 
 MODEL GRAPH
 
-<img width="702" height="929" alt="Screenshot 2025-11-26 201718" src="https://github.com/user-attachments/assets/868ec647-8eb0-4733-98d0-985afe464c7b" />
+<img width="805" height="401" alt="Screenshot 2025-11-26 201654" src="https://github.com/user-attachments/assets/1aeb9a42-e298-4449-9956-c226e6ca8246" />
+
 
 
 
 RESULT:
 
-![Uploading Screenshot 2025-11-26 202123.png…]()
+<img width="688" height="338" alt="Screenshot 2025-11-26 202123" src="https://github.com/user-attachments/assets/407f83bc-fa5d-415b-a799-0d9b0c166493" />
+
